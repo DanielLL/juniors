@@ -2,13 +2,13 @@
 
 <p>
   <strong>Name:</strong>
-  <%= @cookie_type.name %>
+  <%= cookie_type.name %>
 </p>
 
 <p>
   <strong>Price:</strong>
-  <%= @cookie_type.price %>
+  <%= cookie_type.price %>
 </p>
 
-<%= link_to 'Edit', edit_cookie_type_path(@cookie_type) %> |
+<%= link_to 'Edit', edit_cookie_type_path(cookie_type) %> |
 <%= link_to 'Back', cookie_types_path %>
