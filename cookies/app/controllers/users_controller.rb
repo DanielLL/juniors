@@ -29,7 +29,6 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    binding.pry
     user.destroy
     respond_to do |format|
       format.html { redirect_to users_url }
