@@ -2,7 +2,7 @@
 <p>Find me in app/views/user_cookies/index.html.erb</p>
 
 <ul>
-  <%- @user_cookies.each do |user_cookie| %>
+  <%- user_cookies.each do |user_cookie| %>
     <li>
       <p>
       Cookie Type: <%= user_cookie.cookie_type.name %>
@@ -13,4 +13,4 @@
     </li>
   <% end %>
 </ul>
-<%= link_to 'Back', user_path(@user) %>
+<%= link_to 'Back', user_path(user) %>
