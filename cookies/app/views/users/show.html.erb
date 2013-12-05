@@ -2,24 +2,24 @@
 
 <p>
   <strong>First name:</strong>
-  <%= @user.first_name %>
+  <%= user.first_name %>
 </p>
 
 <p>
   <strong>Last name:</strong>
-  <%= @user.last_name %>
+  <%= user.last_name %>
 </p>
 
 <p>
   <strong>Email:</strong>
-  <%= @user.email %>
+  <%= user.email %>
 </p>
 
-<%- if current_user.admin == true || current_user == @user %>
-  <%- @cookies.each do |cookie| %>
+<%- if current_user.admin == true || current_user == user %>
+  <%- cookie_types.each do |cookie| %>
     <li>
     <%= cookie.name %>
-    <%= form_tag "/users/#{@user.id}/cookies", method: :post do %>
+    <%= form_tag "/users/#{user.id}/cookies", method: :post do %>
       <%= hidden_field_tag :cookie_type_id, cookie.id %>
       <%= submit_tag 'Add Cookie' %>
     <% end %>
@@ -27,5 +27,5 @@
     </li>
   <% end %>
 <% end %>
-<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Edit', edit_user_path(user) %> |
 <%= link_to 'Back', users_path %>
